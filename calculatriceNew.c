@@ -7,7 +7,7 @@ int select(int info) {
     printf("Entrer la longueur de tableau : ");
     scanf("%d",&a);
     int h = a - 1;
-    double list[h];
+    float list[h];
     if (a <= 0 && a > 11 ) {
         printf("\n");
         printf("Le maximum possible pour longueur d'un tableaux est 10.\n");
@@ -29,9 +29,9 @@ int select(int info) {
         moyenne(a,list);
     }
 }
-int maximum(int a,double list[a]) {
+int maximum(int a,float list[a]) {
     printf("\n");
-    double max = 0;
+    float max = 0;
     for (int i = 0; i < a; i++)
     {
         if ( list[i] >= max )
@@ -43,13 +43,13 @@ int maximum(int a,double list[a]) {
             max = max;   
         } 
     }
-    printf("\n Le max de cette list est : %d\n", max);
+    printf("\n Le max de cette list est : %.2f\n", max);
     printf("\n");
     main();
 }
-int minimum(int a,double list[a]) {
+int minimum(int a,float list[a]) {
     printf("\n");
-    double min = 199999999;
+    float min = 199999999;
     for (int i = 0; i < a; i++)
     {
         if ( list[i] <= min )
@@ -61,17 +61,18 @@ int minimum(int a,double list[a]) {
             min = min;   
         } 
     }
-    printf("\n Le min de cette list est : %d\n", min);
+    printf("\n Le min de cette list est : %.2f\n", min);
     printf("\n");
     main();
 }
-int moyenne(int a,double list[a]) {
-    double moyenne = 0;
+int moyenne(int a,float list[a]) {
+    float moyenne = 0;
     for(int i = 0; i < a ; i++) {
         moyenne = moyenne + list[i];
     }
     moyenne = moyenne/a;
-    printf("La moyenne de cette list est : %d", moyenne);
+    printf("La moyenne de cette list est : %.2f", moyenne);
+    main();
 }
 int addition() {
     printf("\n");
